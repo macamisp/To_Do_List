@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="691.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Todocontroller">
+   <children>
+      <ImageView fitHeight="699.0" fitWidth="900.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/BILIVER.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="159.0" layoutX="526.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/dangeruos.gif" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ff1500" height="81.0" layoutX="11.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="677.0" />
+      <Label layoutX="106.0" layoutY="50.0" text="Sumanapala Wikramasinha">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="71.0" text="sumanapalawikramasinha@gmail.com">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="128.0" text="TASK  LIST" textFill="RED">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="42.0" fitWidth="61.0" layoutX="42.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/BILIVER.gif" />
+         </image>
+      </ImageView>
+      <JFXCheckBox fx:id="chckDone2" checkedColor="#ff0900" layoutX="20.0" layoutY="212.0" onAction="#chckDone2OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="#fc0303" />
+      <TextField fx:id="txtAddTaskTitle" layoutX="379.0" layoutY="170.0" opacity="0.33" prefHeight="26.0" prefWidth="303.0" promptText=" Title">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <JFXCheckBox fx:id="chckDone3" checkedColor="#ff0900" layoutX="20.0" layoutY="257.0" onAction="#chckDone3OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="#ef0606" />
+      <JFXCheckBox fx:id="chckDone4" checkedColor="#ff2701" layoutX="20.0" layoutY="305.0" onAction="#chckDone4OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="RED" />
+      <JFXCheckBox fx:id="chckDone5" checkedColor="RED" layoutX="20.0" layoutY="352.0" onAction="#chckDone5OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="RED" />
+      <JFXCheckBox fx:id="chckDone1" checkedColor="#ff2200" layoutX="20.0" layoutY="165.0" onAction="#chckDone1OnAction" prefHeight="18.0" prefWidth="36.0" unCheckedColor="RED" />
+      <Label layoutX="324.0" layoutY="34.0" text="My Day">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCompletedTask" layoutX="14.0" layoutY="457.0" opacity="0.33" prefHeight="225.0" prefWidth="678.0" style="-fx-background-color: red;">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="66.4000244140625" text="Id" />
+            <TableColumn fx:id="colTitle" prefWidth="146.39987182617188" text="Title" />
+            <TableColumn fx:id="colDesc" prefWidth="171.2000732421875" text="Description" />
+            <TableColumn fx:id="colDate" prefWidth="117.60003662109375" text="Date" />
+        </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <TextArea fx:id="txtArea1" layoutX="46.0" layoutY="155.0" opacity="0.33" prefHeight="39.0" prefWidth="278.0" promptText="add a task" style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea2" layoutX="46.0" layoutY="202.0" opacity="0.33" prefHeight="39.0" prefWidth="278.0" promptText="add a task " style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea3" layoutX="46.0" layoutY="248.0" opacity="0.33" prefHeight="39.0" prefWidth="278.0" promptText="add a task " style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea4" layoutX="46.0" layoutY="295.0" opacity="0.33" prefHeight="39.0" prefWidth="278.0" promptText="add a task " style="-fx-font-size: 14;" />
+      <TextArea fx:id="txtArea5" layoutX="46.0" layoutY="343.0" opacity="0.33" prefHeight="39.0" prefWidth="278.0" promptText="add a task " style="-fx-font-size: 14;" />
+      <DatePicker fx:id="txtDate" layoutX="379.0" layoutY="253.0" opacity="0.33" prefHeight="26.0" prefWidth="303.0" promptText="date time " />
+      <TextField fx:id="txtAddTaskDesc" layoutX="379.0" layoutY="208.0" opacity="0.33" prefHeight="26.0" prefWidth="303.0" promptText="heding">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnAddTask" layoutX="380.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnAddTaskOnAction" opacity="0.33" prefHeight="30.0" prefWidth="141.0" style="-fx-background-color: red;" text="Add Task" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReload" layoutX="532.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnReloadOnAction" opacity="0.33" prefHeight="30.0" prefWidth="148.0" style="-fx-background-color: red;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="521.0" layoutY="86.0" text="Completed Tasks">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="42.0" fitWidth="61.0" layoutX="521.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/BILIVER.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="61.0" layoutX="563.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/BILIVER.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="61.0" layoutX="605.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/BILIVER.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
